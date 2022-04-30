@@ -1,5 +1,10 @@
 # Spleeter PHP
 
+![example workflow](https://github.com/adrianovcar/spleeter-php/actions/workflows/composer.yml/badge.svg) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![GitHub release](https://badgen.net/github/release/adrianovcar/spleeter-php)](https://GitHub.com/adrianovcar/spleeter-php/realease/)
+
 **Use this app to separate song instruments from an audio file**
 
 *[Spleeter](https://github.com/deezer/spleeter) is Deezer source separation library with pretrained models written in Python and uses Tensorflow. It makes it easy to train source separation model (assuming you have a dataset of isolated sources), and provides already trained state of the art model for performing various flavour of separation.*
@@ -16,7 +21,7 @@ You just need to have Docker installed on your computer
 ## Running the app
 
 1. `docker build . -t spleeter-php`
-2. `docker run -d spleeter-php`
+2. `docker run --name spleeter-php -p 81:80 --mount type=bind,source="$(pwd)",target=/var/www/html -d spleeter-php`
 3. By default, php-spleeter will be looking for audio files over the `./audio-files` folder
 4. Click the button to process the files
 5. Files processed will be on `./audio-files-processed` folder

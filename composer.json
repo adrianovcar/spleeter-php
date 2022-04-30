@@ -2,6 +2,7 @@
 	"name": "adrianovcar/spleeter-php",
 	"description": "Use this app to separate song instruments from an audio file",
 	"type": "project",
+    "license": "MIT",
 	"authors": [
 		{
 			"name": "Adriano Carrijo",

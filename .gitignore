@@ -52,3 +52,6 @@ audio-files-processed/*
 
 # Spleeter files
 pretrained_models
+
+# Composer
+vendor
