@@ -1,0 +1,17 @@
+{
+	"name": "adrianovcar/spleeter-php",
+	"description": "Use this app to separate song instruments from an audio file",
+	"type": "project",
+	"authors": [
+		{
+			"name": "Adriano Carrijo",
+			"email": "adrianovieirac@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">7.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^4.3"
+	}
+}
