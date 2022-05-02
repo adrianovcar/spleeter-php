@@ -1,17 +1,7 @@
 FROM php:7.4-apache
 LABEL maintainer="Adriano Carrijo <@adrianovc>"
 
-# 01. Install some dependencies
-RUN apt update && \
-    apt install \
-    git \
-    wget \
-    -y
-
-# 02. Copy php.ini file
-RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
-
-# 03. Enable PHP extensions
+# 01. Install dependencies
 RUN apt-get update && \
     apt-get install -y \
     python3.4 \
@@ -19,33 +9,24 @@ RUN apt-get update && \
     libsndfile1 \
     ffmpeg
 
-# 04. Clean cache
+# 02. Copy php.ini file
+RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
+# 03. Clean cache
 RUN rm -rf /var/lib/apt/lists/*
 
-# 05. Install Deezer Spleeter
+# 04. Install Deezer Spleeter
 RUN pip install spleeter
 
-# Add user for laravel application
+# 05. Add user for application
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # 06. Copy project files to build
 COPY . /var/www/html/
 
-# 07. Run composer
-RUN wget -cO - https://getcomposer.org/composer-stable.phar > /usr/local/bin/composer && \
-    chmod +x /usr/local/bin/composer && \
-    composer install \
-    --no-dev \
-    --prefer-dist \
-    --no-scripts \
-    --ignore-platform-reqs \
-    --no-progress \
-    --optimize-autoloader \
-    --no-interaction
-
-# Copy existing application directory permissions
+# 07. Copy existing application directory permissions
 COPY --chown=www:www . /var/www/html
 
-# Change current user to www
+# 08. Change current user to www
 USER www
