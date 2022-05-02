@@ -5,11 +5,13 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![GitHub release](https://badgen.net/github/release/adrianovcar/spleeter-php)](https://GitHub.com/adrianovcar/spleeter-php/realease/)
 
-**Use this app to separate song instruments from an audio file**
+**Implementation of deezer/spleeter using Vanilla PHP, recommended to separate songs instruments on "bulk" mode**
 
 *[Spleeter](https://github.com/deezer/spleeter) is Deezer source separation library with pretrained models written in Python and uses Tensorflow. It makes it easy to train source separation model (assuming you have a dataset of isolated sources), and provides already trained state of the art model for performing various flavour of separation.*
 
-This app was developed to create an easy way to separate instruments from audio files, using a web-based interface, turning it possible for non-technician users to create stems from batch files. 
+This app was developed to create an easy way to separate instruments from audio files, using a web-based interface, turning it possible for non-technician users to create stems from batch files.
+
+(If you need to persist your songs history, I recomend you take a look at https://github.com/ahmedash95/audio-spleeter) 
 
 ---
 ## Dependencies
