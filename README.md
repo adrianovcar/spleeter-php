@@ -32,6 +32,7 @@ You just need to have Docker installed on your computer
 ## Next steps
 
 - [ ] Improve interface UX
+- [ ] Add evaluate option on interface
 - [ ] Create automated way to training AI models
 
 ---
