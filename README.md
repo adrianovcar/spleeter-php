@@ -1,6 +1,6 @@
 # Spleeter PHP
 
-![example workflow](https://github.com/adrianovcar/spleeter-php/actions/workflows/composer.yml/badge.svg) 
+[![Docker Image CI](https://github.com/adrianovcar/spleeter-php/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/adrianovcar/spleeter-php/actions/workflows/docker-image.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![GitHub release](https://badgen.net/github/release/adrianovcar/spleeter-php)](https://GitHub.com/adrianovcar/spleeter-php/realease/)
