@@ -47,8 +47,6 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-audio-files/*
-audio-files-processed/*
 
 # Spleeter files
 pretrained_models
